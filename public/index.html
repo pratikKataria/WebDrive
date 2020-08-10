@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Web Drive</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
+
+    <h4 id="fre">Select client name</h4>
 
 <form>
     <!-- GST DIV -->
@@ -51,10 +54,10 @@
         <label for="AdvanceTax_Parent">Advance Tax</label>
 
         <div class="sub1">
-            <input type="radio" name="TDS" value="GST 1" id="TDS"/>
+            <input type="radio" name="level1" value="GST 1" id="TDS"/>
             <label for="TDS">TDS</label>
 
-            <input type="radio" name="ProfessionalTax" value="GST 2" id="ProfessionalTax"/>
+            <input type="radio" name="level1" value="GST 2" id="ProfessionalTax"/>
             <label for="ProfessionalTax">Professional Tax</label>
         </div>
     </div>
@@ -333,7 +336,7 @@
             <input type="radio" name="level1" value="Transfer Pricing Audit" id="TransferPricingAudit"/>
             <label for="TransferPricingAudit">Transfer Pricing Audit</label>
 
-            <input type="radio" name="level1" value=24Q"" id="24Q"/>
+            <input type="radio" name="level1" value="24Q" id="24Q"/>
             <label for="24Q">24Q</label>
 
             <input type="radio" name="level1" value="26Q" id="26Q"/>
@@ -356,11 +359,10 @@
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
  https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
 
 
-<script>
+<!-- <script>
         // Your web app's Firebase configuration
          const firebaseConfig = {
             apiKey: "AIzaSyDCc_lzfXFuTQyyQ6YPWVBn4axNbYF00z4",
@@ -374,21 +376,10 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+</script> -->
 
 
-
-
-
-
-
-
-
-
-
-</script>
-
-
-<script src="/index.js"></script>
+<script src="app.js"></script>
 
 </body>
 
