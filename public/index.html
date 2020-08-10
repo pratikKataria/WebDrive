@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,357 +13,354 @@
 
     <h4 id="fre">Select client name</h4>
 
-<form>
-    <!-- GST DIV -->
     <div>
-        <input type="radio" name="level0" value="GST" id="GST_Parent"/>
-        <label for="GST_Parent">GST</label>
-
-        <div class="sub1">
-            <input type="radio" name="GST" value="GST 1" id="GST1"/>
-            <label for="GST1">GST 1</label>
-
-            <input type="radio" name="GST" value="GST 2" id="GST2"/>
-            <label for="GST2">GST 2</label>
-
-            <input type="radio" name="GST" value="GST 3B" id="GST3B"/>
-            <label for="GST3B">GST 3B</label>
-
-            <input type="radio" name="GST" value="GST 9" id="GST9"/>
-            <label for="GST9">GST 3B</label>
-
-            <input type="radio" name="GST" value="GST 9C" id="GST9C"/>
-            <label for="GST9C">GST 9C</label>
-
-            <input type="radio" name="GST" value="GST composition" id="GST_composition"/>
-            <label for="GST_composition">GST composition</label>
-
-            <input type="radio" name="GST" value="GST Quaterly" id="GST_Quaterly"/>
-            <label for="GST_Quaterly">GST Quaterly</label>
-        </div>
+        <!-- client name selector -->
+        <select id="clientNamesSelector" name="clientNames"></select>
     </div>
 
-    <!-- income tax -->
-    <div>
-        <input type="radio" name="level0" value="IncomeTax" id="IncomeTax_Parent"/>
-        <label for="IncomeTax_Parent">Income Tax</label>
-    </div>
 
-    <!-- AdvanceTax DIV -->
-    <div>
-        <input type="radio" name="level0" value="AdvanceTax" id="AdvanceTax_Parent"/>
-        <label for="AdvanceTax_Parent">Advance Tax</label>
+    <form>
+        <!-- GST DIV -->
+        <div>
+            <input type="radio" name="level0" value="GST" id="GST_Parent" />
+            <label for="GST_Parent">GST</label>
 
-        <div class="sub1">
-            <input type="radio" name="level1" value="GST 1" id="TDS"/>
-            <label for="TDS">TDS</label>
+            <div class="sub1">
+                <input type="radio" name="GST" value="GST 1" id="GST1" />
+                <label for="GST1">GST 1</label>
 
-            <input type="radio" name="level1" value="GST 2" id="ProfessionalTax"/>
-            <label for="ProfessionalTax">Professional Tax</label>
-        </div>
-    </div>
+                <input type="radio" name="GST" value="GST 2" id="GST2" />
+                <label for="GST2">GST 2</label>
 
-    <!-- ROC DIV -->
-    <div>
-        <input type="radio" name="level0" value="ROC" id="ROC_Parent"/>
-        <label for="ROC_Parent">ROC</label>
+                <input type="radio" name="GST" value="GST 3B" id="GST3B" />
+                <label for="GST3B">GST 3B</label>
 
-        <div class="sub1">
-            <input type="radio" name="ROC" value="OPC" id="OPC"/>
-            <label for="OPC">OPC</label>
+                <input type="radio" name="GST" value="GST 9" id="GST9" />
+                <label for="GST9">GST 3B</label>
 
-            <input type="radio" name="ROC" value="llp" id="llp"/>
-            <label for="llp">LLP</label>
+                <input type="radio" name="GST" value="GST 9C" id="GST9C" />
+                <label for="GST9C">GST 9C</label>
 
-            <input type="radio" name="ROC" value="PVT" id="pvt"/>
-            <label for="pvt">PVT</label>
+                <input type="radio" name="GST" value="GST composition" id="GST_composition" />
+                <label for="GST_composition">GST composition</label>
 
-            <input type="radio" name="ROC" value="smallCo" id="smallCo"/>
-            <label for="smallCo">Small co.</label>
-
-            <input type="radio" name="ROC" value="Section 8" id="Section8"/>
-            <label for="Section8">Section 8</label>
-
-            <input type="radio" name="ROC" value="trust" id="trust"/>
-            <label for="trust">Trust</label>
-
-            <input type="radio" name="ROC" value="Co.op" id="Co.op"/>
-            <label for="Co.op">Co.op</label>
-
-            <input type="radio" name="ROC" value="ROC Quaterly" id="soc"/>
-            <label for="soc">SOC</label>
-
-            <input type="radio" name="ROC" value="NidhiCo" id="NidhiCo"/>
-            <label for="NidhiCo">Nidhi co</label>
-
-            <input type="radio" name="ROC" value="NBFC" id="NBFC"/>
-            <label for="NBFC">NBFC</label>
-        </div>
-    </div>
-
-    <!-- FASSAI DIV -->
-    <div>
-        <input type="radio" name="level0" value="FASSI" id="FASSI_Parent"/>
-        <label for="FASSI_Parent">FASSI</label>
-
-        <div class="sub1">
-            <input type="radio" name="FASSI" value="State" id="State"/>
-            <label for="State">State</label>
-
-            <input type="radio" name="FASSI" value="Basic" id="Basic"/>
-            <label for="Basic">Basic</label>
-
-            <input type="radio" name="FASSI" value="Import" id="Import"/>
-            <label for="Import">Import</label>
-
-            <input type="radio" name="FASSI" value="Export" id="Export"/>
-            <label for="Export">Export</label>
-
-            <input type="radio" name="FASSI" value="Manufacturing" id="Manufacturing"/>
-            <label for="Manufacturing">Manufacturing</label>
-        </div>
-    </div>
-
-    <!-- SignBoard tax -->
-    <div>
-        <input type="radio" name="level0" value="SignBoard" id="SignBoard_Parent"/>
-        <label for="SignBoard_Parent">Sign Board</label>
-    </div>
-
-    <!-- Trademark tax -->
-    <div>
-        <input type="radio" name="level0" value="Trademark" id="Trademark_Parent"/>
-        <label for="Trademark_Parent">Trademark</label>
-    </div>
-
-    <!-- RERA DIV -->
-    <div>
-        <input type="radio" name="level0" value="RERA" id="RERA_Parent"/>
-        <label for="RERA_Parent">RERA</label>
-
-        <div class="sub1">
-            <input type="radio" name="RERA" value="Promoter" id="Promoter"/>
-            <label for="Promoter">Promoter</label>
-
-            <input type="radio" name="RERA" value="PromoterCompliance" id="PromoterCompliance"/>
-            <label for="PromoterCompliance">Promoter Compliance</label>
-        </div>
-    </div>
-
-    <!-- Health License tax -->
-    <div>
-        <input type="radio" name="level0" value="Health License" id="HealthLicense_Parent"/>
-        <label for="HealthLicense_Parent">Health License </label>
-    </div>
-
-    <!--Payroll Outsourcing-->
-    <div>
-        <input type="radio" name="level0" value="Payroll Outsourcing"
-               id="PayrollOutsourcing_Parent"/>
-        <label for="PayrollOutsourcing_Parent">Payroll Outsourcing</label>
-        <div class="sub1">
-            <!--TDS-->
-            <div>
-                <input type="radio" name="level1" value="TDS" id="TDS_Payroll_Outsourcing"/>
-                <label for="TDS_Payroll_Outsourcing">TDS</label>
-                <div class="sub2">
-
-                    <input type="radio" name="level2" value="Working" id="Working_TDS_Payroll"/>
-                    <label for="Working_TDS_Payroll">Working</label>
-
-                    <input type="radio" name="level2" value="Return" id="Return_TDS_Payroll"/>
-                    <label for="Return_TDS_Payroll">Return</label>
-
-                    <input type="radio" name="level2" value="TDS Certificates"
-                           id="TDS_Certificates_Payroll"/>
-                    <label for="TDS_Certificates_Payroll">TDS Certificates</label>
-
-                </div>
-            </div>
-
-            <!--Professional Tax-->
-            <div>
-                <input type="radio" name="level1" value="TDS" id="ProTax_Payroll_Outsourcing"/>
-                <label for="ProTax_Payroll_Outsourcing">Professional Tax</label>
-                <div class="sub2">
-
-                    <input type="radio" name="level2" value="Working"
-                           id="Working_ProTax_Payroll"/>
-                    <label for="Working_ProTax_Payroll">Working</label>
-
-                    <input type="radio" name="level2" value="Return"
-                           id="Return_ProTax_Payroll_Payroll"/>
-                    <label for="Return_ProTax_Payroll_Payroll">Return</label>
-
-                </div>
-            </div>
-
-            <!--PF-->
-            <div>
-                <input type="radio" name="level1" value="PF" id="PF_Payroll_Outsourcing"/>
-                <label for="PF_Payroll_Outsourcing">PF</label>
-                <div class="sub2">
-
-                    <input type="radio" name="level2" value="Working" id="Working_PF_Payroll"/>
-                    <label for="Working_PF_Payroll">Working</label>
-
-                    <input type="radio" name="level2" value="Challans"
-                           id="Challans_PF_Payroll"/>
-                    <label for="Challans_PF_Payroll">Challans</label>
-
-                    <input type="radio" name="level2" value="TDS" id="TDS_PF_Payroll"/>
-                    <label for="TDS_PF_Payroll">TDS</label>
-
-                    <input type="radio" name="level2" value="ProTax"
-                           id="ProfessionalTax_PF_Payroll"/>
-                    <label for="ProfessionalTax_PF_Payroll">Professional Tax</label>
-
-                </div>
-            </div>
-
-            <!--ESIC-->
-            <div>
-                <input type="radio" name="level1" value="ESIC" id="ESIC_Payroll_Outsourcing"/>
-                <label for="ESIC_Payroll_Outsourcing">ESIC</label>
-                <div class="sub2">
-
-                    <input type="radio" name="level2" value="Working"
-                           id="Working_ESIC_Payroll"/>
-                    <label for="Working_ESIC_Payroll">Working</label>
-
-                    <input type="radio" name="level2" value="Challans"
-                           id="Challans_ESIC_Payroll"/>
-                    <label for="Challans_ESIC_Payroll">Challans</label>
-
-                    <input type="radio" name="level2" value="TDS" id="TDS_ESIC_Payroll"/>
-                    <label for="TDS_ESIC_Payroll">TDS</label>
-
-                    <input type="radio" name="level2" value="ProTax"
-                           id="ProfessionalTax_ESIC_Payroll"/>
-                    <label for="ProfessionalTax_ESIC_Payroll">Professional Tax</label>
-
-                </div>
+                <input type="radio" name="GST" value="GST Quaterly" id="GST_Quaterly" />
+                <label for="GST_Quaterly">GST Quaterly</label>
             </div>
         </div>
-    </div>
 
-    <!--TDS-->
-    <div>
-        <input type="radio" name="level0" value="TDS" id="TDS_1"/>
-        <label for="TDS_1">TDS</label>
-        <div class="sub1">
-
-            <input type="radio" name="level1" value="Working" id="Working_TDS_1"/>
-            <label for="Working_TDS_1">Working</label>
-
-            <input type="radio" name="level1" value="Return" id="Return_TDS_1"/>
-            <label for="Return_TDS_1">Return</label>
-
-            <input type="radio" name="level1" value="TDS Certificates" id="TDS_1_Certificates"/>
-            <label for="TDS_1_Certificates">TDS Certificates</label>
-
+        <!-- income tax -->
+        <div>
+            <input type="radio" name="level0" value="IncomeTax" id="IncomeTax_Parent" />
+            <label for="IncomeTax_Parent">Income Tax</label>
         </div>
-    </div>
 
-    <!--Professional Tax-->
-    <div>
-        <input type="radio" name="level0" value="ProTax" id="ProTax"/>
-        <label for="ProTax">Professional Tax</label>
-        <div class="sub1">
+        <!-- AdvanceTax DIV -->
+        <div>
+            <input type="radio" name="level0" value="AdvanceTax" id="AdvanceTax_Parent" />
+            <label for="AdvanceTax_Parent">Advance Tax</label>
 
-            <input type="radio" name="level1" value="Working" id="Working_ProTax"/>
-            <label for="Working_ProTax">Working</label>
+            <div class="sub1">
+                <input type="radio" name="level1" value="GST 1" id="TDS" />
+                <label for="TDS">TDS</label>
 
-            <input type="radio" name="level1" value="Return" id="Return_ProTax"/>
-            <label for="Return_ProTax">Return</label>
-
+                <input type="radio" name="level1" value="GST 2" id="ProfessionalTax" />
+                <label for="ProfessionalTax">Professional Tax</label>
+            </div>
         </div>
-    </div>
 
-    <!--PF-->
-    <div>
-        <input type="radio" name="level0" value="PF" id="PF"/>
-        <label for="PF">PF</label>
-        <div class="sub1">
+        <!-- ROC DIV -->
+        <div>
+            <input type="radio" name="level0" value="ROC" id="ROC_Parent" />
+            <label for="ROC_Parent">ROC</label>
 
-            <input type="radio" name="level1" value="Working" id="Working_PF"/>
-            <label for="Working_PF">Working</label>
+            <div class="sub1">
+                <input type="radio" name="ROC" value="OPC" id="OPC" />
+                <label for="OPC">OPC</label>
 
-            <input type="radio" name="level1" value="Challans" id="Challans_PF"/>
-            <label for="Challans_PF">Challans</label>
+                <input type="radio" name="ROC" value="llp" id="llp" />
+                <label for="llp">LLP</label>
 
-            <input type="radio" name="level1" value="TDS" id="TDS_PF"/>
-            <label for="TDS_PF">TDS</label>
+                <input type="radio" name="ROC" value="PVT" id="pvt" />
+                <label for="pvt">PVT</label>
 
-            <input type="radio" name="level1" value="ProTax" id="ProfessionalTax_PF"/>
-            <label for="ProfessionalTax_PF">Professional Tax</label>
+                <input type="radio" name="ROC" value="smallCo" id="smallCo" />
+                <label for="smallCo">Small co.</label>
 
+                <input type="radio" name="ROC" value="Section 8" id="Section8" />
+                <label for="Section8">Section 8</label>
+
+                <input type="radio" name="ROC" value="trust" id="trust" />
+                <label for="trust">Trust</label>
+
+                <input type="radio" name="ROC" value="Co.op" id="Co.op" />
+                <label for="Co.op">Co.op</label>
+
+                <input type="radio" name="ROC" value="ROC Quaterly" id="soc" />
+                <label for="soc">SOC</label>
+
+                <input type="radio" name="ROC" value="NidhiCo" id="NidhiCo" />
+                <label for="NidhiCo">Nidhi co</label>
+
+                <input type="radio" name="ROC" value="NBFC" id="NBFC" />
+                <label for="NBFC">NBFC</label>
+            </div>
         </div>
-    </div>
 
-    <!--ESIC-->
-    <div>
-        <input type="radio" name="level0" value="ESIC" id="ESIC"/>
-        <label for="ESIC">ESIC</label>
-        <div class="sub1">
+        <!-- FASSAI DIV -->
+        <div>
+            <input type="radio" name="level0" value="FASSI" id="FASSI_Parent" />
+            <label for="FASSI_Parent">FASSI</label>
 
-            <input type="radio" name="level1" value="Working" id="Working_ESIC"/>
-            <label for="Working_ESIC">Working</label>
+            <div class="sub1">
+                <input type="radio" name="FASSI" value="State" id="State" />
+                <label for="State">State</label>
 
-            <input type="radio" name="level1" value="Challans" id="Challans_ESIC"/>
-            <label for="Challans_ESIC">Challans</label>
+                <input type="radio" name="FASSI" value="Basic" id="Basic" />
+                <label for="Basic">Basic</label>
 
-            <input type="radio" name="level1" value="TDS" id="TDS_ESIC"/>
-            <label for="TDS_ESIC">TDS</label>
+                <input type="radio" name="FASSI" value="Import" id="Import" />
+                <label for="Import">Import</label>
 
-            <input type="radio" name="level1" value="ProTax" id="ProfessionalTax_ESIC"/>
-            <label for="ProfessionalTax_ESIC">Professional Tax</label>
+                <input type="radio" name="FASSI" value="Export" id="Export" />
+                <label for="Export">Export</label>
 
+                <input type="radio" name="FASSI" value="Manufacturing" id="Manufacturing" />
+                <label for="Manufacturing">Manufacturing</label>
+            </div>
         </div>
-    </div>
 
-    <!--Audit also-->
-    <div>
-        <input type="radio" name="level0" value="Audit" id="Audit"/>
-        <label for="Audit">Audit</label>
-        <div class="sub1">
-
-            <input type="radio" name="level1" value="TaxAudit" id="TaxAudit"/>
-            <label for="TaxAudit">Tax Audit</label>
-
-            <input type="radio" name="level1" value="GSTAudit" id="GSTAudit"/>
-            <label for="GSTAudit">GST Audit</label>
-
-            <input type="radio" name="level1" value="Transfer Pricing Audit" id="TransferPricingAudit"/>
-            <label for="TransferPricingAudit">Transfer Pricing Audit</label>
-
-            <input type="radio" name="level1" value="24Q" id="24Q"/>
-            <label for="24Q">24Q</label>
-
-            <input type="radio" name="level1" value="26Q" id="26Q"/>
-            <label for="26Q">26Q</label>
-
-            <input type="radio" name="level1" value="27Q" id="27Q"/>
-            <label for="27Q">26Q</label>
-
+        <!-- SignBoard tax -->
+        <div>
+            <input type="radio" name="level0" value="SignBoard" id="SignBoard_Parent" />
+            <label for="SignBoard_Parent">Sign Board</label>
         </div>
-    </div>
 
-</form>
+        <!-- Trademark tax -->
+        <div>
+            <input type="radio" name="level0" value="Trademark" id="Trademark_Parent" />
+            <label for="Trademark_Parent">Trademark</label>
+        </div>
+
+        <!-- RERA DIV -->
+        <div>
+            <input type="radio" name="level0" value="RERA" id="RERA_Parent" />
+            <label for="RERA_Parent">RERA</label>
+
+            <div class="sub1">
+                <input type="radio" name="RERA" value="Promoter" id="Promoter" />
+                <label for="Promoter">Promoter</label>
+
+                <input type="radio" name="RERA" value="PromoterCompliance" id="PromoterCompliance" />
+                <label for="PromoterCompliance">Promoter Compliance</label>
+            </div>
+        </div>
+
+        <!-- Health License tax -->
+        <div>
+            <input type="radio" name="level0" value="Health License" id="HealthLicense_Parent" />
+            <label for="HealthLicense_Parent">Health License </label>
+        </div>
+
+        <!--Payroll Outsourcing-->
+        <div>
+            <input type="radio" name="level0" value="Payroll Outsourcing" id="PayrollOutsourcing_Parent" />
+            <label for="PayrollOutsourcing_Parent">Payroll Outsourcing</label>
+            <div class="sub1">
+                <!--TDS-->
+                <div>
+                    <input type="radio" name="level1" value="TDS" id="TDS_Payroll_Outsourcing" />
+                    <label for="TDS_Payroll_Outsourcing">TDS</label>
+                    <div class="sub2">
+
+                        <input type="radio" name="level2" value="Working" id="Working_TDS_Payroll" />
+                        <label for="Working_TDS_Payroll">Working</label>
+
+                        <input type="radio" name="level2" value="Return" id="Return_TDS_Payroll" />
+                        <label for="Return_TDS_Payroll">Return</label>
+
+                        <input type="radio" name="level2" value="TDS Certificates" id="TDS_Certificates_Payroll" />
+                        <label for="TDS_Certificates_Payroll">TDS Certificates</label>
+
+                    </div>
+                </div>
+
+                <!--Professional Tax-->
+                <div>
+                    <input type="radio" name="level1" value="TDS" id="ProTax_Payroll_Outsourcing" />
+                    <label for="ProTax_Payroll_Outsourcing">Professional Tax</label>
+                    <div class="sub2">
+
+                        <input type="radio" name="level2" value="Working" id="Working_ProTax_Payroll" />
+                        <label for="Working_ProTax_Payroll">Working</label>
+
+                        <input type="radio" name="level2" value="Return" id="Return_ProTax_Payroll_Payroll" />
+                        <label for="Return_ProTax_Payroll_Payroll">Return</label>
+
+                    </div>
+                </div>
+
+                <!--PF-->
+                <div>
+                    <input type="radio" name="level1" value="PF" id="PF_Payroll_Outsourcing" />
+                    <label for="PF_Payroll_Outsourcing">PF</label>
+                    <div class="sub2">
+
+                        <input type="radio" name="level2" value="Working" id="Working_PF_Payroll" />
+                        <label for="Working_PF_Payroll">Working</label>
+
+                        <input type="radio" name="level2" value="Challans" id="Challans_PF_Payroll" />
+                        <label for="Challans_PF_Payroll">Challans</label>
+
+                        <input type="radio" name="level2" value="TDS" id="TDS_PF_Payroll" />
+                        <label for="TDS_PF_Payroll">TDS</label>
+
+                        <input type="radio" name="level2" value="ProTax" id="ProfessionalTax_PF_Payroll" />
+                        <label for="ProfessionalTax_PF_Payroll">Professional Tax</label>
+
+                    </div>
+                </div>
+
+                <!--ESIC-->
+                <div>
+                    <input type="radio" name="level1" value="ESIC" id="ESIC_Payroll_Outsourcing" />
+                    <label for="ESIC_Payroll_Outsourcing">ESIC</label>
+                    <div class="sub2">
+
+                        <input type="radio" name="level2" value="Working" id="Working_ESIC_Payroll" />
+                        <label for="Working_ESIC_Payroll">Working</label>
+
+                        <input type="radio" name="level2" value="Challans" id="Challans_ESIC_Payroll" />
+                        <label for="Challans_ESIC_Payroll">Challans</label>
+
+                        <input type="radio" name="level2" value="TDS" id="TDS_ESIC_Payroll" />
+                        <label for="TDS_ESIC_Payroll">TDS</label>
+
+                        <input type="radio" name="level2" value="ProTax" id="ProfessionalTax_ESIC_Payroll" />
+                        <label for="ProfessionalTax_ESIC_Payroll">Professional Tax</label>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--TDS-->
+        <div>
+            <input type="radio" name="level0" value="TDS" id="TDS_1" />
+            <label for="TDS_1">TDS</label>
+            <div class="sub1">
+
+                <input type="radio" name="level1" value="Working" id="Working_TDS_1" />
+                <label for="Working_TDS_1">Working</label>
+
+                <input type="radio" name="level1" value="Return" id="Return_TDS_1" />
+                <label for="Return_TDS_1">Return</label>
+
+                <input type="radio" name="level1" value="TDS Certificates" id="TDS_1_Certificates" />
+                <label for="TDS_1_Certificates">TDS Certificates</label>
+
+            </div>
+        </div>
+
+        <!--Professional Tax-->
+        <div>
+            <input type="radio" name="level0" value="ProTax" id="ProTax" />
+            <label for="ProTax">Professional Tax</label>
+            <div class="sub1">
+
+                <input type="radio" name="level1" value="Working" id="Working_ProTax" />
+                <label for="Working_ProTax">Working</label>
+
+                <input type="radio" name="level1" value="Return" id="Return_ProTax" />
+                <label for="Return_ProTax">Return</label>
+
+            </div>
+        </div>
+
+        <!--PF-->
+        <div>
+            <input type="radio" name="level0" value="PF" id="PF" />
+            <label for="PF">PF</label>
+            <div class="sub1">
+
+                <input type="radio" name="level1" value="Working" id="Working_PF" />
+                <label for="Working_PF">Working</label>
+
+                <input type="radio" name="level1" value="Challans" id="Challans_PF" />
+                <label for="Challans_PF">Challans</label>
+
+                <input type="radio" name="level1" value="TDS" id="TDS_PF" />
+                <label for="TDS_PF">TDS</label>
+
+                <input type="radio" name="level1" value="ProTax" id="ProfessionalTax_PF" />
+                <label for="ProfessionalTax_PF">Professional Tax</label>
+
+            </div>
+        </div>
+
+        <!--ESIC-->
+        <div>
+            <input type="radio" name="level0" value="ESIC" id="ESIC" />
+            <label for="ESIC">ESIC</label>
+            <div class="sub1">
+
+                <input type="radio" name="level1" value="Working" id="Working_ESIC" />
+                <label for="Working_ESIC">Working</label>
+
+                <input type="radio" name="level1" value="Challans" id="Challans_ESIC" />
+                <label for="Challans_ESIC">Challans</label>
+
+                <input type="radio" name="level1" value="TDS" id="TDS_ESIC" />
+                <label for="TDS_ESIC">TDS</label>
+
+                <input type="radio" name="level1" value="ProTax" id="ProfessionalTax_ESIC" />
+                <label for="ProfessionalTax_ESIC">Professional Tax</label>
+
+            </div>
+        </div>
+
+        <!--Audit also-->
+        <div>
+            <input type="radio" name="level0" value="Audit" id="Audit" />
+            <label for="Audit">Audit</label>
+            <div class="sub1">
+
+                <input type="radio" name="level1" value="TaxAudit" id="TaxAudit" />
+                <label for="TaxAudit">Tax Audit</label>
+
+                <input type="radio" name="level1" value="GSTAudit" id="GSTAudit" />
+                <label for="GSTAudit">GST Audit</label>
+
+                <input type="radio" name="level1" value="Transfer Pricing Audit" id="TransferPricingAudit" />
+                <label for="TransferPricingAudit">Transfer Pricing Audit</label>
+
+                <input type="radio" name="level1" value="24Q" id="24Q" />
+                <label for="24Q">24Q</label>
+
+                <input type="radio" name="level1" value="26Q" id="26Q" />
+                <label for="26Q">26Q</label>
+
+                <input type="radio" name="level1" value="27Q" id="27Q" />
+                <label for="27Q">26Q</label>
+
+            </div>
+        </div>
+
+    </form>
 
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/7.17.2/firebase-app.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.17.2/firebase-app.js"></script>
 
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
- https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
 
 
-<!-- <script>
+    <!-- <script>
         // Your web app's Firebase configuration
          const firebaseConfig = {
             apiKey: "AIzaSyDCc_lzfXFuTQyyQ6YPWVBn4axNbYF00z4",
@@ -379,7 +377,7 @@
 </script> -->
 
 
-<script src="app.js"></script>
+    <script src="app.js"></script>
 
 </body>
 
