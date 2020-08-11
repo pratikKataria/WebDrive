@@ -11,10 +11,12 @@
 
 <body>
 
-    <h4 id="fre">Select client name</h4>
+    <label for="selectFile">Select file form computer</label>
+    <input type="file" id="selectFile" name="files[]" multiple />
 
     <div>
         <!-- client name selector -->
+         <label for="clientNamesSelector">Select client name  </label>
         <select id="clientNamesSelector" name="clientNames"></select>
     </div>
 
@@ -348,6 +350,12 @@
 
     </form>
 
+    <label for="year">Select year</label>
+    <select id="year"> </select>
+
+    <label for="date">Select date</label>
+    <input type="date" id="date"/>
+
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="/__/firebase/7.17.2/firebase-app.js"></script>
@@ -358,7 +366,7 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
     https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-storage.js"></script>
 
     <!-- <script>
         // Your web app's Firebase configuration
