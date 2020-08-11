@@ -7,7 +7,7 @@ while(x--)
         popChecked(index)
         popValue(index);
         subDirBuilder[index] = this.value;
-        // console.log(subDirBuilder);
+        console.log(subDirBuilder);
 
         // console.log("Checked: "+this.checked);
         // console.log("Name: "+this.name);
@@ -22,8 +22,6 @@ function popChecked(index) {
    for (var i = 0; i < radioInputs.length; i++) {
        if (radioInputs[i].type == "radio") {
            radioInputs[i].checked = false;
-       console.log("Name: "+ radioInputs[i].name);
-
        }
     }
 }
@@ -34,6 +32,28 @@ function popValue(index) {
     }
 }
 
+populateYear();
+// function for selection of year
+function populateYear() {
+    var start = new Date().getFullYear();
+    var end = 1900;
+    var option ="";
+    for (year = start; year >= end; year--) {
+        option += "<option>" + year +"</option>";
+    }
+    document.getElementById("year").innerHTML = option;
+}
+
+populateMonth();
+// function for selection of month
+function populateMonth() {
+    var monthNames = [ "January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December" ];
+    var option = "";
+    for (month in monthNames) {
+        option += "<option>"+monthNames[month]+"</option>";
+    }
+    document.getElementById("month").innerHTML = option;
+}
 
 var db = firebase.firestore();
 db.collection("clients").doc("client-names").get().then((doc) => {
@@ -54,7 +74,6 @@ db.collection("clients").doc("client-names").get().then((doc) => {
 
 
 uploadFile();
-populateYear();
 
 
 
@@ -81,13 +100,4 @@ populateYear();
 
 
 
-// function for selection of year
-function populateYear() {
-    var start = new Date().getFullYear();
-    var end = 1900;
-    var option ="";
-    for (year = start; year >= end; year--) {
-        option += "<option>" + year +"</option>"
-    }
-    document.getElementById("year").innerHTML = option;
-}
+
