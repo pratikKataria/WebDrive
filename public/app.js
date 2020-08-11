@@ -96,13 +96,18 @@ function createDir() {
                                     selectedMonth.options[selectedMonth.selectedIndex].value+'/'+
                                     selectedNatureOfWork.options[selectedNatureOfWork.selectedIndex].value+"/";
 
-    
-    fileToUpload.name = clientName.options[clientName.selectedIndex].value + selectedYear.options[selectedYear.selectedIndex].value+selectedMonth.options[selectedMonth.selectedIndex].value
-
-    uploadFile(completeAddress);
+    try {
+        fileToUpload.name = clientName.options[clientName.selectedIndex].value + selectedYear.options[selectedYear.selectedIndex].value+selectedMonth.options[selectedMonth.selectedIndex].value
+        uploadFile(completeAddress);
+    } catch(err) {
+        window.alert('Select file to upload');
+    }
 }
 
 function uploadFile(location) {
+
+    console.log('files ' + fileToUpload);
+
     console.log('uploaded ' + location + fileToUpload.name);
     
     var storageRef = firebase.storage();
