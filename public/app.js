@@ -4,10 +4,10 @@ var inputs=document.querySelectorAll("input[type=radio]"),
 while(x--)
     inputs[x].addEventListener('change', function() {
         var index = this.name.substring(5);
-
+        popChecked(index)
         popValue(index);
         subDirBuilder[index] = this.value;
-        console.log(subDirBuilder);
+        // console.log(subDirBuilder);
 
         // console.log("Checked: "+this.checked);
         // console.log("Name: "+this.name);
@@ -15,6 +15,18 @@ while(x--)
         // console.log("Parent: "+this.parent);
     },0);
 
+function popChecked(index) {
+    var intIndex = parseInt(index)
+   var radioInputs = document.getElementsByName(`level${intIndex+1}`);
+   
+   for (var i = 0; i < radioInputs.length; i++) {
+       if (radioInputs[i].type == "radio") {
+           radioInputs[i].checked = false;
+       console.log("Name: "+ radioInputs[i].name);
+
+       }
+    }
+}
 
 function popValue(index) {
     while(subDirBuilder.length-1 > index) {
