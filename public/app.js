@@ -1,5 +1,29 @@
-var db = firebase.firestore();
+var subDirBuilder = [];
+var inputs=document.querySelectorAll("input[type=radio]"),
+    x=inputs.length;
+while(x--)
+    inputs[x].addEventListener('change', function() {
+        var index = this.name.substring(5);
 
+        popValue(index);
+        subDirBuilder[index] = this.value;
+        console.log(subDirBuilder);
+
+        // console.log("Checked: "+this.checked);
+        // console.log("Name: "+this.name);
+        // console.log("Value: "+this.value);
+        // console.log("Parent: "+this.parent);
+    },0);
+
+
+function popValue(index) {
+    while(subDirBuilder.length-1 > index) {
+        subDirBuilder.pop()
+    }
+}
+
+
+var db = firebase.firestore();
 db.collection("clients").doc("client-names").get().then((doc) => {
     
     var namesObject = JSON.stringify(doc.data());
@@ -23,22 +47,22 @@ populateYear();
 
 
 
-function uploadFile() {
+// function uploadFile() {
 
-    var fileButton = document.getElementById("selectFile");
+//     var fileButton = document.getElementById("selectFile");
 
-    fileButton.addEventListener('change', function(e) {
+//     fileButton.addEventListener('change', function(e) {
 
-        var file = e.target.files[0];
-        var storageRef = firebase.storage();
+//         var file = e.target.files[0];
+//         var storageRef = firebase.storage();
 
-        var storage = storageRef.ref('demo/' + file.name);
+//         var storage = storageRef.ref('demo/' + file.name);
 
-        storage.put(file);
+//         storage.put(file);
 
-        console.log('file uploaded ');
-    });
-}
+//         console.log('file uploaded ');
+//     });
+// }
 
 
 
