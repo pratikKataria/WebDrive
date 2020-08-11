@@ -1,3 +1,10 @@
+
+ var fileToUpload;
+ var fileButton = document.getElementById("selectFile");
+ fileButton.addEventListener('change', function(e) {
+     fileToUpload = e.target.files[0];
+ });
+
 var subDirBuilder = [];
 var inputs=document.querySelectorAll("input[type=radio]"),
     x=inputs.length;
@@ -72,28 +79,40 @@ db.collection("clients").doc("client-names").get().then((doc) => {
 });
 
 
+function createDir() {
+    var clientName = document.getElementById("clientNamesSelector");
+    var selectedYear = document.getElementById("year");
+    var selectedMonth = document.getElementById("month");
+    var selectedNatureOfWork = document.getElementById("natureOfWork");
 
-uploadFile();
+    var fileSubAddress = '';
+    for(var i =0; i < subDirBuilder.length; i++) {
+        fileSubAddress += subDirBuilder[i] +'/'
+    }
 
+    var completeAddress = clientName.options[clientName.selectedIndex].value +'/'+
+                                    fileSubAddress+
+                                    selectedYear.options[selectedYear.selectedIndex].value+'/'+
+                                    selectedMonth.options[selectedMonth.selectedIndex].value+'/'+
+                                    selectedNatureOfWork.options[selectedNatureOfWork.selectedIndex].value+"/";
 
+    
+    fileToUpload.name = clientName.options[clientName.selectedIndex].value + selectedYear.options[selectedYear.selectedIndex].value+selectedMonth.options[selectedMonth.selectedIndex].value
 
+    uploadFile(completeAddress);
+}
 
-// function uploadFile() {
+function uploadFile(location) {
+    console.log('uploaded ' + location + fileToUpload.name);
+    
+    var storageRef = firebase.storage();
 
-//     var fileButton = document.getElementById("selectFile");
+    var storage = storageRef.ref(location + fileToUpload.name);
 
-//     fileButton.addEventListener('change', function(e) {
+    storage.put(fileToUpload);
 
-//         var file = e.target.files[0];
-//         var storageRef = firebase.storage();
-
-//         var storage = storageRef.ref('demo/' + file.name);
-
-//         storage.put(file);
-
-//         console.log('file uploaded ');
-//     });
-// }
+    console.log('file uploaded ');
+}
 
 
 
