@@ -46,7 +46,8 @@ function populateYear() {
     var end = 1900;
     var option ="";
     for (year = start; year >= end; year--) {
-        option += "<option>" + year +"</option>";
+        var yearWithNextyear = year + '-' + (year+1+'').substring(2);
+        option += "<option>" + yearWithNextyear  +"</option>";
     }
     document.getElementById("year").innerHTML = option;
 }
@@ -54,7 +55,7 @@ function populateYear() {
 populateMonth();
 // function for selection of month
 function populateMonth() {
-    var monthNames = [ "January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December" ];
+    var monthNames = [ "Apr-01", "May-01", "Jun-01", "Jul-01", "Aug-01", "Sep-01","Oct-01", "Nov-01", "Dec-01", "Jan-02", "Feb-02", "Mar-02" ];
     var option = "";
     for (month in monthNames) {
         option += "<option>"+monthNames[month]+"</option>";
@@ -81,39 +82,40 @@ db.collection("clients").doc("client-names").get().then((doc) => {
 
 function createDir() {
     var clientName = document.getElementById("clientNamesSelector");
+    var directoryType = document.getElementById("DirectoryType");
     var selectedYear = document.getElementById("year");
     var selectedMonth = document.getElementById("month");
     var selectedNatureOfWork = document.getElementById("natureOfWork");
 
     var fileSubAddress = '';
+    var fileNameAcro = '';
     for(var i =0; i < subDirBuilder.length; i++) {
-        fileSubAddress += subDirBuilder[i] +'/'
+        fileSubAddress += subDirBuilder[i] +'/';
+        fileNameAcro += '-'+subDirBuilder[i].charAt(0);
     }
 
     var completeAddress = clientName.options[clientName.selectedIndex].value +'/'+
+                                    directoryType.options[directoryType.selectedIndex].value +'/'+
                                     fileSubAddress+
                                     selectedYear.options[selectedYear.selectedIndex].value+'/'+
                                     selectedMonth.options[selectedMonth.selectedIndex].value+'/'+
                                     selectedNatureOfWork.options[selectedNatureOfWork.selectedIndex].value+"/";
 
+    console.log(completeAddress);
+
     try {
-        fileToUpload.name = clientName.options[clientName.selectedIndex].value + selectedYear.options[selectedYear.selectedIndex].value+selectedMonth.options[selectedMonth.selectedIndex].value
-        uploadFile(completeAddress);
+        var fileNameBuilder = clientName.options[clientName.selectedIndex].value + fileNameAcro +'-'+ selectedYear.options[selectedYear.selectedIndex].value + '-' + selectedMonth.options[selectedMonth.selectedIndex].value +'-'+selectedNatureOfWork.options[selectedNatureOfWork.selectedIndex].value +'.'+ getFileExtention();
+        uploadFile(fileNameBuilder, completeAddress);
     } catch(err) {
         window.alert('Select file to upload');
     }
 }
 
-function uploadFile(location) {
+function uploadFile(filename, location) {
 
-    console.log('files ' + fileToUpload);
-
-    console.log('uploaded ' + location + fileToUpload.name);
-    
     var storageRef = firebase.storage();
 
-    var storage = storageRef.ref(location + fileToUpload.name);
-
+    var storage = storageRef.ref(location + filename);
 
     var task = storage.put(fileToUpload);
 
@@ -137,6 +139,11 @@ function uploadFile(location) {
 
 
     console.log('file uploaded ');
+}
+
+function getFileExtention()  {
+    var fileName = fileToUpload.name;
+    return fileName.slice((fileName.lastIndexOf(".") - 1 >>> 0) + 2);
 }
 
 
