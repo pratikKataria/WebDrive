@@ -1,6 +1,6 @@
-.sub1, .sub2 { display: none; }
+.sub1, .sub2, .sub3 { display: none; }
 
-:checked ~ .sub1, :checked ~ .sub2 {
+:checked ~ .sub1, :checked ~ .sub2, :checked ~ .sub3 {
     display: block;
     margin-left: 40px;
 }

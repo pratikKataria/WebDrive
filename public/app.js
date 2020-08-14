@@ -114,7 +114,27 @@ function uploadFile(location) {
 
     var storage = storageRef.ref(location + fileToUpload.name);
 
-    storage.put(fileToUpload);
+
+    var task = storage.put(fileToUpload);
+
+    task.on('state_changed', 
+        function progress(snapshot) {
+            var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            
+            if (percentage == 100) {
+                window.alert('file uploaded');
+            }
+        }, 
+
+        function error(err) {
+
+        },
+
+        function complete() {
+
+        }
+    );
+
 
     console.log('file uploaded ');
 }

@@ -20,34 +20,127 @@
         <select id="clientNamesSelector" name="clientNames"></select>
     </div>
 
+    <div>
+        <h3>Select Directory Type</h3>
+
+        <select id="DirectoryType">
+            <option>Regular Files</option>
+            <option>Permanent Files</option>
+        </select>
+    </div>
+
+    <div>
+        <h3>Select Directory</h3>
+    </div>
 
     <form>
         <!-- GST DIV -->
         <div>
-            <input type="radio" name="level0" value="GST" id="GST_Parent" />
-            <label for="GST_Parent">GST</label>
+            <input type="radio" name="level0" value="GSTR" id="GST_Parent"/>
+            <label for="GST_Parent">GSTR</label>
 
             <div class="sub1">
-                <input type="radio" name="level1" value="GST 1" id="GST1" />
-                <label for="GST1">GST 1</label>
+                <div>
+                    <input type="radio" name="level1" value="GSTR – 1: Return for Outward Supplies"
+                           id="GST1"/>
+                    <label for="GST1">GSTR – 1: Return for Outward Supplies</label>
+                </div>
 
-                <input type="radio" name="level1" value="GST 2" id="GST2" />
-                <label for="GST2">GST 2</label>
+                <div><input type="radio" name="level1" value=" GSTR – 2: Return for Inward Supplies"
+                            id="GST2"/>
+                    <label for="GST2"> GSTR – 2: Return for Inward Supplies</label></div>
 
-                <input type="radio" name="level1" value="GST 3B" id="GST3B" />
-                <label for="GST3B">GST 3B</label>
+                <div>
+                    <input type="radio" name="level1" value="GSTR – 2A: Read Only Document"
+                           id="GST3B"/>
+                    <label for="GST3B">GSTR – 2A: Read Only Document</label>
+                </div>
 
-                <input type="radio" name="level1" value="GST 9" id="GST9" />
-                <label for="GST9">GST 3B</label>
+                <div>
+                    <input type="radio" name="level1"
+                           value="GSTR – 3B: Summary of Inward and Outward Supplies" id="GST9"/>
+                    <label for="GST9">GSTR – 3B: Summary of Inward and Outward Supplies</label>
+                </div>
 
-                <input type="radio" name="level1" value="GST 9C" id="GST9C" />
-                <label for="GST9C">GST 9C</label>
+                <div>
+                    <input type="radio" name="level1"
+                           value="GSTR – 4: Return For Composition Dealers" id="GST9C"/>
+                    <label for="GST9C">GSTR – 4: Return For Composition Dealers</label>
+                </div>
+                <div>
+                    <input type="radio" name="level1"
+                           value="GSTR – 5: Return For Non-Resident Taxable Persons"
+                           id="GST_composition"/>
+                    <label for="GST_composition">GSTR – 5: Return For Non-Resident Taxable
+                        Persons</label>
+                </div>
 
-                <input type="radio" name="level1" value="GST composition" id="GST_composition" />
-                <label for="GST_composition">GST composition</label>
+                <div>
+                    <input type="radio" name="level1"
+                           value="GSTR – 6: Return For Input Service Distributors" id="GST_7"/>
+                    <label for="GST_7">GSTR – 6: Return For Input Service Distributors</label>
+                </div>
 
-                <input type="radio" name="level1" value="GST Quaterly" id="GST_Quaterly" />
-                <label for="GST_Quaterly">GST Quaterly</label>
+                <div>
+                    <input type="radio" name="level1"
+                           value="GSTR – 7: Return For Taxpayers Deducting TDS" id="GST_Quaterly"/>
+                    <label for="GST_Quaterly">GSTR – 7: Return For Taxpayers Deducting TDS</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="level1"
+                           value="GSTR – 8: Return For E-Commerce Operators Collecting TCS"
+                           id="123"/>
+                    <label for="123">GSTR – 8: Return For E-Commerce Operators Collecting
+                        TCS</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="level1"
+                           value="GSTR – 9: Annual Return For Normal Registered Taxpayer Under GST"
+                           id="124"/>
+                    <label for="124">GSTR – 9: Annual Return For Normal Registered Taxpayer Under
+                        GST</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="level1"
+                           value="GSTR – 9A: Annual Return For Composition Dealers" id="125"/>
+                    <label for="125">GSTR – 9A: Annual Return For Composition Dealers</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="level1"
+                           value=" GSTR – 9B: Annual Return For E-Commerce Operators Collecting TCS"
+                           id="126"/>
+                    <label for="126"> GSTR – 9B: Annual Return For E-Commerce Operators Collecting
+                        TCS</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="level1"
+                           value="GSTR – 9C: Return For Registered Persons Getting Accounts Audited From CA"
+                           id="127"/>
+                    <label for="127">GSTR – 9C: Return For Registered Persons Getting Accounts
+                        Audited From CA</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="level1"
+                           value="GSTR – 10: Return For Registered Person Whose GST Registration Gets Cancelled"
+                           id="128"/>
+                    <label for="128">GSTR – 10: Return For Registered Person Whose GST Registration
+                        Gets Cancelled</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="level1"
+                           value="GSTR – 11: Return For UIN (Unique Identification Number) Holders"
+                           id="129"/>
+                    <label for="129">GSTR – 11: Return For UIN (Unique Identification Number)
+                        Holders</label>
+                </div>
+
             </div>
         </div>
 
@@ -55,6 +148,17 @@
         <div>
             <input type="radio" name="level0" value="IncomeTax" id="IncomeTax_Parent" />
             <label for="IncomeTax_Parent">Income Tax</label>
+
+            <div class="sub1">
+                <input type="radio" name="level1" value="Income Tax Return" id="ITR" />
+                <label for="ITR">Income Tax Return</label>
+
+                <input type="radio" name="level1" value="Assessment" id="Assessment" />
+                <label for="Assessment">Assessment</label>
+
+                <input type="radio" name="level1" value="Appeals" id="Appeals" />
+                <label for="appeals">Appeals</label>
+            </div>
         </div>
 
         <!-- AdvanceTax DIV -->
@@ -63,11 +167,11 @@
             <label for="AdvanceTax_Parent">Advance Tax</label>
 
             <div class="sub1">
-                <input type="radio" name="level1" value="TDS" id="TDS" />
-                <label for="TDS">TDS</label>
+                <input type="radio" name="level1" value="Corporate" id="Corporate" />
+                <label for="Corporate">Corporate</label>
 
-                <input type="radio" name="level1" value="ProfessionalTax" id="ProfessionalTax" />
-                <label for="ProfessionalTax">Professional Tax</label>
+                <input type="radio" name="level1" value="Non Corporate" id="Non_Corporate" />
+                <label for="Non_Corporate">Non Corporate</label>
             </div>
         </div>
 
@@ -138,10 +242,19 @@
             <label for="SignBoard_Parent">Sign Board</label>
         </div>
 
-        <!-- Trademark tax -->
+        <!-- MSME tax -->
         <div>
-            <input type="radio" name="level0" value="Trademark" id="Trademark_Parent" />
-            <label for="Trademark_Parent">Trademark</label>
+            <input type="radio" name="level0" value="MSME" id="MSME" />
+            <label for="MSME">MSME</label>
+
+
+            <div class="sub1">
+                <input type="radio" name="level1" value="Individual" id="Individual" />
+                <label for="Individual">Individual</label>
+
+                <input type="radio" name="level1" value="Others" id="MSME_Other" />
+                <label for="MSME_Other">Others</label>
+            </div>
         </div>
 
         <!-- RERA DIV -->
@@ -150,11 +263,17 @@
             <label for="RERA_Parent">RERA</label>
 
             <div class="sub1">
-                <input type="radio" name="level1" value="Promoter" id="Promoter" />
-                <label for="Promoter">Promoter</label>
+                <input type="radio" name="level1" value="Promoter Project Registration" id="Promoter_Project_Registration" />
+                <label for="Promoter_Project_Registration">Promoter Project Registration</label>
 
-                <input type="radio" name="level1" value="PromoterCompliance" id="PromoterCompliance" />
-                <label for="PromoterCompliance">Promoter Compliance</label>
+                <input type="radio" name="level1" value="Agent Proprietor Registration" id="Agent_Proprietor_Registration" />
+                <label for="Agent_Proprietor_Registration">Agent Proprietor Registration</label>
+
+                <input type="radio" name="level1" value="Promoter Project Compliance" id="Promoter_Project_Compliance" />
+                <label for="Promoter_Project_Compliance">Promoter Project Compliance</label>
+
+                <input type="radio" name="level1" value="Agent other than propreitor" id="Agent_other_than_propreitor" />
+                <label for="Agent_other_than_propreitor">Agent other than propreitor</label>
             </div>
         </div>
 
@@ -175,15 +294,30 @@
                     <label for="TDS_Payroll_Outsourcing">TDS</label>
                     <div class="sub2">
 
-                        <input type="radio" name="level2" value="Working" id="Working_TDS_Payroll" />
-                        <label for="Working_TDS_Payroll">Working</label>
 
-                        <input type="radio" name="level2" value="Return" id="Return_TDS_Payroll" />
-                        <label for="Return_TDS_Payroll">Return</label>
+                        <input type="radio" name="level2" value="24Q" id="payroll_TDS_24Q"/>
+                        <label for="payroll_TDS_24Q">24Q</label>
 
-                        <input type="radio" name="level2" value="TDS Certificates" id="TDS_Certificates_Payroll" />
-                        <label for="TDS_Certificates_Payroll">TDS Certificates</label>
+                        <input type="radio" name="level2" value="26Q" id="payroll_TDS_26Q"/>
+                        <label for="payroll_TDS_26Q">26Q</label>
 
+                        <input type="radio" name="level2" value="27Q" id="payroll_TDS_27Q"/>
+                        <label for="payroll_TDS_27Q">27Q</label>
+
+
+                        <div class="sub3">
+                            <input type="radio" name="level3" value="Working"
+                                   id="Working_TDS_Payroll_26Q"/>
+                            <label for="Working_TDS_Payroll_26Q">Working</label>
+
+                            <input type="radio" name="level3" value="Return"
+                                   id="Return_TDS_Payroll_26Q"/>
+                            <label for="Return_TDS_Payroll_26Q">Return</label>
+
+                            <input type="radio" name="level3" value="TDS Certificates"
+                                   id="TDS_Certificates_Payroll_26Q"/>
+                            <label for="TDS_Certificates_Payroll_26Q">TDS Certificates</label>
+                        </div>
                     </div>
                 </div>
 
@@ -327,6 +461,9 @@
             <label for="Audit">Audit</label>
             <div class="sub1">
 
+                <input type="radio" name="level1" value="Stat Audit" id="StatAudit" />
+                <label for="StatAudit">Stat Audit</label>
+
                 <input type="radio" name="level1" value="TaxAudit" id="TaxAudit" />
                 <label for="TaxAudit">Tax Audit</label>
 
@@ -336,15 +473,8 @@
                 <input type="radio" name="level1" value="Transfer Pricing Audit" id="TransferPricingAudit" />
                 <label for="TransferPricingAudit">Transfer Pricing Audit</label>
 
-                <input type="radio" name="level1" value="24Q" id="24Q" />
-                <label for="24Q">24Q</label>
-
-                <input type="radio" name="level1" value="26Q" id="26Q" />
-                <label for="26Q">26Q</label>
-
-                <input type="radio" name="level1" value="27Q" id="27Q" />
-                <label for="27Q">27Q</label>
-
+                <input type="radio" name="level1" value="Others" id="Others" />
+                <label for="Others">Others</label>
             </div>
         </div>
 
